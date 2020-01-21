@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1400px" height="666px" viewBox="0 0 1400 666" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.2 (78181) - https://sketchapp.com -->
+    <title>bg</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M0,40 C110.666667,13.3333333 235.166667,0 373.5,0 C581,0 804.092903,31 992.171451,31 C1117.55715,31 1253.5,22 1400,4 L1400,509 C1296,528.559524 1163.79627,538.339286 1003.38882,538.339286 C762.77764,538.339286 640.412673,502.333771 409.5,509 C255.558218,513.444153 119.058218,526.916375 0,549.416667 L0,40 Z" id="path-1"></path>
+        <circle id="path-3" cx="1292.5" cy="523.5" r="29.5"></circle>
+        <filter x="-250.0%" y="-207.6%" width="600.0%" height="600.0%" filterUnits="objectBoundingBox" id="filter-4">
+            <feMorphology radius="9" operator="dilate" in="SourceAlpha" result="shadowSpreadOuter1"></feMorphology>
+            <feOffset dx="0" dy="25" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
+            <feMorphology radius="9" operator="erode" in="SourceAlpha" result="shadowInner"></feMorphology>
+            <feOffset dx="0" dy="25" in="shadowInner" result="shadowInner"></feOffset>
+            <feComposite in="shadowOffsetOuter1" in2="shadowInner" operator="out" result="shadowOffsetOuter1"></feComposite>
+            <feGaussianBlur stdDeviation="42" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.891422194   0 0 0 0 0.761749635   0 0 0 0 0.318701724  0 0 0 1 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Destop" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Vault77-Main-New" transform="translate(0.000000, -3965.000000)">
+            <g id="6" transform="translate(0.000000, 3828.000000)">
+                <g id="bg" transform="translate(0.000000, 137.000000)">
+                    <mask id="mask-2" fill="white">
+                        <use xlink:href="#path-1"></use>
+                    </mask>
+                    <use id="Mask-Copy-5" fill="#F7F6F2" fill-rule="nonzero" xlink:href="#path-1"></use>
+                    <text id="77" opacity="0.030134" mask="url(#mask-2)" font-family="AvenirNext-Heavy, Avenir Next" font-size="400" font-weight="600" line-spacing="300" fill="#2D2C28">
+                        <tspan x="969" y="403">77</tspan>
+                    </text>
+                    <g id="77" mask="url(#mask-2)" fill="#F7F6F2" fill-rule="nonzero" opacity="0.295805432">
+                        <g transform="translate(0.000000, -128.000000)" id="Mask">
+                            <path d="M0,60 C110.666667,20 235.166667,-4.54747351e-13 373.5,-4.54747351e-13 C581,-4.54747351e-13 804.092903,51 992.171451,51 C1117.55715,51 1253.5,38.6666667 1400,14 L1400,643 C1296,649.22619 1163.79627,652.339286 1003.38882,652.339286 C762.77764,652.339286 640.412673,636.333771 409.5,643 C255.558218,647.444153 119.058218,654.249708 0,663.416667 L0,60 Z"></path>
+                        </g>
+                    </g>
+                    <g id="Oval-Copy-42" fill-rule="nonzero">
+                        <use fill="black" fill-opacity="1" filter="url(#filter-4)" xlink:href="#path-3"></use>
+                        <use stroke="#FFDB60" stroke-width="18" xlink:href="#path-3"></use>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
