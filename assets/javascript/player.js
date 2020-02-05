@@ -26,13 +26,16 @@ function lrcParser(data) {
         textTimeStamps.push(convertTime(timeStamp.replace(/<|>/g, '')));
       });
 
-      scripts.push({
+      let audioData = {
         start: convertTime(start),
         text: text,
         parsedText: parsedText,
         end: convertTime(end),
-        wordTimeStamps: textTimeStamps.sort()
-      })
+        wordTimeStamps: textTimeStamps
+      }
+      
+      audioData.parsedWords = convertWords(audioData);;
+      scripts.push(audioData);
     }
   });
 
@@ -40,8 +43,24 @@ function lrcParser(data) {
   return result
 }
 
-function convertWords(start, text) {
+function convertWords(audioData) {
+  let start = audioData.start;
+  let text = audioData.text;
+  let timeStamps = audioData.wordTimeStamps;
+  let words = text.split(wordTimeStamp).filter(elem => elem !== '0');
+  let result = [];
 
+  words.forEach(function(word, index, arr) {
+    let parsedWord = {};
+
+    parsedWord.start = index == 0 ? start : timeStamps[index - 1];
+    parsedWord.end = timeStamps[index];
+    parsedWord.part = word;
+
+    result.push(parsedWord);
+  });
+
+  return result;
 }
 
 function convertTime(string) {
